@@ -12,7 +12,7 @@
   elements:
   - title: User Info
     name: User Info
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: looker_single_record
     fields: [users.id, users.email, users.name, users.traffic_source, users.created_month,
@@ -36,7 +36,7 @@
     height: 6
   - title: Lifetime Orders
     name: Lifetime Orders
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [order_items.order_count]
@@ -56,7 +56,7 @@
     height: 3
   - title: Total Items Returned
     name: Total Items Returned
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [order_items.count]
@@ -77,7 +77,7 @@
     height: 3
   - title: Lifetime Spend
     name: Lifetime Spend
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [order_items.total_sale_price]
@@ -107,7 +107,7 @@
     height: 3
   - title: Items Order History
     name: Items Order History
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: looker_grid
     fields: [order_items.id, products.item_name, order_items.status, order_items.created_date,
@@ -129,7 +129,7 @@
     height: 9
   - title: Favorite Categories
     name: Favorite Categories
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: looker_pie
     fields: [products.category, order_items.count]
@@ -153,7 +153,7 @@
     height: 9
   - title: User Location
     name: User Location
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: looker_geo_coordinates
     fields: [users.zip, users.count]
@@ -197,7 +197,7 @@
     height: 6
   - name: Customer Image and Name
     title: Customer Image and Name
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [users.user_image, users.name]
@@ -229,7 +229,7 @@
     default_value: jgraham@gmail.com
     allow_multiple_values: true
     required: false
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     listens_to_filters: []
     field: users.email

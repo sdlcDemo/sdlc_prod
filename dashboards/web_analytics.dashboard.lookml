@@ -13,7 +13,7 @@
   elements:
   - title: Total Visitors
     name: Total Visitors
-    model: thelook
+    model: sdlc_thelook
     explore: events
     type: single_value
     fields: [events.unique_visitors, events.event_week]
@@ -48,7 +48,7 @@
     height: 3
   - title: Total Converted Visitors
     name: Total Converted Visitors
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [users.count]
@@ -65,7 +65,7 @@
     height: 3
   - title: Total Profit
     name: Total Profit
-    model: thelook
+    model: sdlc_thelook
     explore: order_items
     type: single_value
     fields: [order_items.total_sale_price]
@@ -91,7 +91,7 @@
     height: 3
   - title: Visits by Browser
     name: Visits by Browser
-    model: thelook
+    model: sdlc_thelook
     explore: events
     type: looker_pie
     fields: [events.browser, events.count]
@@ -122,7 +122,7 @@
     height: 8
   - title: How Long do Visitors Spend on Website?
     name: How Long do Visitors Spend on Website?
-    model: thelook
+    model: sdlc_thelook
     explore: events
     type: looker_bar
     fields: [sessions.duration_seconds_tier, sessions.count]
@@ -178,7 +178,7 @@
     height: 10
   - title: Bounce Rate by Page
     name: Bounce Rate by Page
-    model: thelook
+    model: sdlc_thelook
     explore: sessions
     type: looker_column
     fields: [events.event_type, events.bounce_rate, sessions.count]
@@ -235,7 +235,7 @@
     height: 7
   - title: Most Popular Brands
     name: Most Popular Brands
-    model: thelook
+    model: sdlc_thelook
     explore: events
     type: table
     fields: [product_viewed.brand, events.count, events.unique_visitors, sessions.count_purchase,
@@ -283,7 +283,7 @@
     height: 7
   - title: eCommerce Funnel
     name: eCommerce Funnel
-    model: thelook
+    model: sdlc_thelook
     explore: sessions
     type: looker_column
     fields: [sessions.all_sessions, sessions.count_browse_or_later, sessions.count_product_or_later,
@@ -350,7 +350,7 @@
     height: 7
   - title: Global Events
     name: Global Events
-    model: thelook
+    model: sdlc_thelook
     explore: events
     type: looker_map
     fields: [events.approx_location, events.count]
@@ -408,7 +408,7 @@
     height: 8
   - title: Daily Session and User Count
     name: Daily Session and User Count
-    model: thelook
+    model: sdlc_thelook
     explore: sessions
     type: looker_line
     fields: [sessions.session_start_date, sessions.count, sessions.overall_conversion]
@@ -458,7 +458,7 @@
     height: 9
   - title: Percent Purchasing Sessions
     name: Percent Purchasing Sessions
-    model: thelook
+    model: sdlc_thelook
     explore: sessions
     type: looker_pie
     fields: [sessions.includes_purchase, sessions.count]
@@ -518,7 +518,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: thelook
+    model: sdlc_thelook
     explore: events
     listens_to_filters: []
     field: events.browser
@@ -528,7 +528,7 @@
     default_value:
     allow_multiple_values: true
     required: false
-    model: thelook
+    model: sdlc_thelook
     explore: events
     listens_to_filters: []
     field: users.traffic_source
