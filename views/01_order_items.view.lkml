@@ -138,6 +138,19 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+    dimension: gross_margin {
+      type: number
+      value_format_name: usd
+      sql: ${sale_price} - ${inventory_items.cost} ;;
+    }
+
+    measure: total_gross_margin {
+      type: sum
+      value_format_name: usd
+      sql: ${gross_margin} ;;
+      drill_fields: [detail*]
+    }
+
   measure: average_sale_price {
     type: average
     value_format_name: usd
