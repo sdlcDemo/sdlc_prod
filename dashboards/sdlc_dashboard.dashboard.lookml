@@ -120,25 +120,3 @@
     col: 0
     width: 8
     height: 6
-  - title: Gross Margin
-    name: Gross Margin
-    model: sdlc_thelook
-    explore: order_items
-    type: single_value
-    fields: [order_items.total_gross_margin]
-    limit: 500
-    column_limit: 50
-    custom_color_enabled: true
-    show_single_value_title: true
-    show_comparison: false
-    comparison_type: value
-    comparison_reverse_colors: false
-    show_comparison_label: true
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    defaults_version: 1
-    row: 16
-    col: 0
-    width: 8
-    height: 6
