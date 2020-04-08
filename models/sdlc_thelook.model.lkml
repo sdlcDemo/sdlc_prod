@@ -1,7 +1,7 @@
 connection: "looker-private-demo"
 label: "SDLC"
 include: "/views/**/*.view" # include all the views
-#include: "/dashboards/*.dashboard.lookml" # include all the dashboards
+include: "/dashboards/*.dashboard.lookml" # include all the dashboards
 
 
 explore: order_items {
