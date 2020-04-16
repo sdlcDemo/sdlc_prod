@@ -43,6 +43,7 @@
     totals_color: "#808080"
     series_types: {}
     defaults_version: 1
+    listen: {}
     row: 6
     col: 0
     width: 24
@@ -68,6 +69,7 @@
     conditional_formatting_include_nulls: false
     series_types: {}
     defaults_version: 1
+    listen: {}
     row: 0
     col: 8
     width: 8
@@ -93,6 +95,7 @@
     conditional_formatting_include_nulls: false
     series_types: {}
     defaults_version: 1
+    listen: {}
     row: 0
     col: 16
     width: 8
