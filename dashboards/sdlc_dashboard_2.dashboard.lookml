@@ -130,6 +130,7 @@
     series_colors:
       Male - users.count: "#E57947"
     defaults_version: 1
+    listen: {}
     row: 0
     col: 0
     width: 11

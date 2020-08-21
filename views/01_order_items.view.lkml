@@ -205,6 +205,18 @@ view: order_items {
     sql: 1.0 * ${returned_count} / nullif(${count},0) ;;
   }
 
+    dimension: gross_margin {
+      type: number
+      value_format_name: usd
+      sql: ${sale_price} - ${inventory_items.cost} ;;
+    }
+
+    measure: total_gross_margin {
+      type: sum
+      value_format_name: usd
+      sql: ${gross_margin} ;;
+      drill_fields: [detail*]
+    }
 
   set: detail {
     fields: [id, order_id, status, created_date, sale_price, products.brand, products.item_name, users.portrait, users.name, users.email]
