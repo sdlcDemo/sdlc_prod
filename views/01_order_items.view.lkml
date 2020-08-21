@@ -9,6 +9,19 @@ view: order_items {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: gross_margin_iqvia {
+    type: number
+    value_format_name: usd
+    sql: ${sale_price} - ${inventory_items.cost} ;;
+  }
+
+  measure: total_gross_margin_iqvia {
+    type: sum
+    value_format_name: usd
+    sql: ${gross_margin_iqvia} ;;
+    drill_fields: [detail*]
+  }
+
   dimension: inventory_item_id {
     type: number
     hidden: yes
