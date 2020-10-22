@@ -124,6 +124,11 @@ view: order_items {
 
 ########## Financial Information ##########
 
+  dimension:  SDLC {
+    type: string
+    sql: ${sale_price} ;;
+  }
+
   dimension: sale_price {
     type: number
     value_format_name: usd
