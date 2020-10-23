@@ -1,6 +1,7 @@
 - dashboard: sdlc_dashboard_2
   title: SDLC Dashboard 2
   layout: newspaper
+  preferred_viewer: dashboards
   elements:
   - title: User Age Tier
     name: User Age Tier
@@ -130,6 +131,7 @@
     series_colors:
       Male - users.count: "#E57947"
     defaults_version: 1
+    listen: {}
     row: 0
     col: 0
     width: 11
