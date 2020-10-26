@@ -124,10 +124,11 @@ view: order_items {
 
 ########## Financial Information ##########
 
-dimension: SDLC_TEST {
-  type: string
-  sql: ${sale_price} ;;
-}
+  measure: average_gross_margin {
+    type: average
+    sql: ${gross_margin} ;;
+    value_format_name: usd
+  }
 
   dimension: sale_price {
     type: number
