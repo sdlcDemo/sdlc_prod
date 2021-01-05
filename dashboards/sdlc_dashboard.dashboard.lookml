@@ -124,16 +124,17 @@
     col: 0
     width: 8
     height: 6
-  - title: ALB SDLC TEST
-    name: ALB SDLC TEST
+  - title: IQVIA Example
+    name: IQVIA Example
     model: sdlc_thelook
     explore: order_items
-    type: looker_line
-    fields: [order_items.average_gross_margin, order_items.created_month]
-    fill_fields: [order_items.created_month]
-    sorts: [order_items.created_month desc]
+    type: looker_column
+    fields: [order_items.total_inventory_iqvia, order_items.created_date]
+    fill_fields: [order_items.created_date]
+    filters:
+      order_items.created_date: 7 days
+    sorts: [order_items.created_date desc]
     limit: 500
-    query_timezone: America/Los_Angeles
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -156,10 +157,16 @@
     label_density: 25
     x_axis_scale: auto
     y_axis_combined: true
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
     show_null_points: true
     interpolation: linear
     defaults_version: 1
+    series_types: {}
     row: 16
     col: 0
-    width: 8
-    height: 6
+    width: 13
+    height: 8
