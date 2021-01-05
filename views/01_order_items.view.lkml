@@ -28,6 +28,13 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+  measure: total_inventory_iqvia {
+    type: count_distinct
+    value_format_name: usd
+    sql: ${inventory_item_id} ;;
+    drill_fields: [detail*]
+  }
+
   dimension: user_id {
     type: number
     hidden: yes
