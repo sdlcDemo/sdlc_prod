@@ -137,24 +137,31 @@ view: order_items {
 
 ########## Financial Information ##########
 
+  measure: average_gross_margin {
+    type: average
+    sql: ${gross_margin} ;;
+    value_format_name: usd
+  }
+
   dimension: sale_price {
     type: number
     value_format_name: usd
     sql: ${TABLE}.sale_price ;;
   }
 
-  dimension: gross_margin_liveperson {
+  dimension: gross_margin {
     type: number
     value_format_name: usd
     sql: ${sale_price} - ${inventory_items.cost} ;;
   }
 
-  measure: total_gross_margin_liveperson {
+  measure: total_gross_margin {
     type: sum
     value_format_name: usd
-    sql: ${gross_margin_liveperson} ;;
+    sql: ${gross_margin} ;;
     drill_fields: [detail*]
   }
+
 
 
   measure: total_sale_price {
@@ -217,19 +224,6 @@ view: order_items {
     value_format_name: percent_2
     sql: 1.0 * ${returned_count} / nullif(${count},0) ;;
   }
-
-    dimension: gross_margin {
-      type: number
-      value_format_name: usd
-      sql: ${sale_price} - ${inventory_items.cost} ;;
-    }
-
-    measure: total_gross_margin {
-      type: sum
-      value_format_name: usd
-      sql: ${gross_margin} ;;
-      drill_fields: [detail*]
-    }
 
   set: detail {
     fields: [id, order_id, status, created_date, sale_price, products.brand, products.item_name, users.portrait, users.name, users.email]
