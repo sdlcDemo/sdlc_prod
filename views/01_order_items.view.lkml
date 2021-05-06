@@ -9,6 +9,16 @@ view: order_items {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: total_gross_margin_miovision {
+    type: number
+    sql: ${sale_price} - ${inventory_items.cost} ;;
+  }
+
+  measure: total_margin_miovision {
+    type: sum
+    sql: ${total_gross_margin_miovision} ;;
+  }
+
   dimension: inventory_item_id {
     type: number
     hidden: yes
